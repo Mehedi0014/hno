@@ -1,0 +1,1581 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==================================
+   Base styles: opinionated defaults
+   ================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* =================================
+   Browser Upgrade Prompt
+   ================================= */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ===================================
+   Author's custom styles
+   =================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================
+   Helper classes
+   =================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+******************************************************************************************************************
+******************************************************************************************************************
+******************************************************************************************************************
+*
+*/
+
+
+
+/*
+base color : #7db119;
+green : rgba(0, 128, 0, 1);
+*/
+
+/*
+*
+*
+* Global Section ==================================================================================
+*
+*
+*/
+
+body {
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    background-image: url(../img/body_bg.gif);
+}
+
+a {
+    color: rgba(0, 128, 0, 1);
+}
+
+a:hover {
+    color: rgba(0, 128, 0, .8);
+}
+
+img {
+    width: 100%;
+}
+
+img.gray_border {
+    border: 3px solid gray;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+
+img.gray_border:hover {
+    border: 3px solid transparent;
+    padding: 5px;
+    -webkit-box-shadow: 8px 11px 8px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 11px 8px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 8px 11px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0.50em 0;
+}
+
+.lead_four {
+	font-size: 18pt;
+}
+
+.lead_five {
+	font-size: 15pt;
+}
+
+.lead_six {
+	font-weight: bold;
+	font-size: large;
+}
+
+.btn-primary {
+    background-color: rgba(0, 128, 0, 1);
+    color: #fff;
+    border: 3px solid rgba(0, 128, 0, 1);
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: rgba(0, 128, 0, 1);
+    border: 3px solid rgba(0, 128, 0, 1);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Global Section Patr by Part ==================================================================================
+*
+*
+*/
+
+
+
+
+/* Navigation Section ........................... */
+
+/* Home Page Sub Menu part..................... */
+
+
+
+#home_page_scrolling_text marquee {
+	font-size: 20px;
+	background-color: rgba(0, 128, 0, 1);
+	color: #fff;
+	padding: 5px 0px;
+	margin: 0 0 -2px 0;
+}
+
+
+#home_page_sub_menu {
+	background-color: #ffffff;
+	padding: 16px 0;
+	color: rgba(0, 128, 0, 1);
+	font-weight: 500;
+	margin-top: -4px;
+}
+
+
+#home_page_sub_menu i {
+    font-size: 20px;
+    padding-left: 5px;
+    
+}
+
+#home_page_sub_menu i.fa-map-marker-alt,
+#sub_menu i.fa-map-marker-alt {
+	padding: 0 5px 0 0;
+}
+
+#home_page_sub_menu .icon_bg_color {
+	background-color: rgb(0, 128, 0);
+	color: #fff;
+	padding: 8px;
+	border-radius: 50%;
+	margin: 0 5px 0 0;
+}
+
+.margin-left {
+    margin-left: 45px;
+}
+
+#home_page_sub_menu img {
+    padding-right: 5px;
+}
+
+
+
+@media(max-width: 991px){
+    #home_page_sub_menu img {
+        padding-right: 0px;
+    }
+
+    #home_page_sub_menu .for_padding_left {
+        padding-left: 0px;
+    }
+
+    #home_page_sub_menu .text_align {
+        text-align: start;
+    }
+
+    #home_page_sub_menu table {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* Sub menu part..................... */
+#sub_menu {
+	background-color: rgba(0, 128, 0, 1);
+	padding: 16px 0;
+	color: #ccc;
+	font-weight: 500;
+}
+
+#sub_menu i {
+    font-size: 20px;
+    padding-left: 5px;
+    color: #ccc;
+}
+
+#sub_menu .text_align {
+    text-align: right;
+}
+
+@media(max-width: 991px){
+
+    #sub_menu .d_block_991 {
+        text-align: center;
+        display: block;
+    }
+}
+
+
+/* Home Page Main Menu part */
+
+#home_page_main_menu {
+    background: #299a0b; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #299a0b 0%, #299a0b 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #299a0b 0%,#299a0b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #299a0b 0%,#299a0b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#299a0b', endColorstr='#299a0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 5px 0;
+}
+
+#home_page_main_menu ul li a {
+    color: #fff;
+    font-weight: 500;
+}
+
+#home_page_main_menu ul li a:hover {
+    background: rgba(11, 77, 11, 0.397);
+}
+
+
+#home_page_main_menu ul li .dropdown-menu {
+	background: linear-gradient(to bottom, rgb(16, 51, 249) 0%,rgb(5, 96, 185) 0%,rgb(5, 64, 123) 100%,rgb(5, 9, 86) 100%);
+	background: linear-gradient(to bottom, rgb(4, 6, 20) 0%,rgb(26, 97, 168) 0%,rgb(27, 81, 135) 100%,rgb(60, 68, 223) 100%);
+    border: none;
+}
+
+#home_page_main_menu ul li div.dropdown-menu a.dropdown-item:hover {
+    background: rgba(11, 77, 11, 0.397);
+}
+
+
+#home_page_main_menu .navbar-nav.mr-auto {
+	margin: 0 auto;
+}
+
+#home_page_main_menu .stellarnav li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+
+#home_page_main_menu li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+
+/* main menu part */
+#main_menu {
+    border-bottom: 5px solid rgba(0, 128, 0, 1);
+    background-color: rgba(0, 128, 0, 1);
+	margin-top: 2px;
+}
+
+#main_menu .navbar-nav.mr-auto {
+	margin: 0 auto;
+}
+
+#main_menu .stellarnav li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+#main_menu li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* Footer Section ........................................ */
+
+
+.sub_footer {
+    background: #10cc32; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #10cc32 0%, #299a0b 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #10cc32 0%,#299a0b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #10cc32 0%,#299a0b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10cc32', endColorstr='#299a0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	height: auto;
+	color: #fff;
+	margin-top: 36px;
+}
+
+.sub_footer {
+	margin-top: 0;
+	margin-bottom: 0px;
+	padding: 25px 0;
+}
+
+.sub_footer ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub_footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sub_footer ul li a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Sidebar ==================================================================================
+*
+*
+*/
+
+#full_sidebar .doctor_link_button {
+    margin-bottom: 20px;
+}
+
+#full_sidebar ul li.list-group-item a {
+    text-decoration: none;
+}
+
+#full_sidebar ul li.list-group-item:hover {
+    margin-left: 2px;
+    -webkit-box-shadow: -5px 12px 9px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 12px 9px -8px rgba(0,0,0,0.75);
+    box-shadow: -5px 12px 9px -8px rgba(0,0,0,0.75);
+}
+
+
+#full_sidebar ul li.list-group-item:active {
+    margin: 0;
+    box-shadow: 0 0px #666;
+    transform: translateY(0px);
+}
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Home page ==================================================================================
+*
+*
+*/
+
+
+
+/* Sticky navbar for home page ....... */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/* Sticky navbar without home page ........ */
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 0px !important;
+}
+
+
+/* Slider section ....... */
+#slider,
+#slider .container-fluid,
+#slider .container-fluid .row,
+#slider .container-fluid .row .col-12 {
+    margin: 0;
+    padding: 0;
+}
+
+/* ................ */
+
+
+
+#about_hno_praxis {
+    margin-top: 55px;
+}
+
+#about_hno_praxis .row {
+	background-color: #fff;
+    padding: 30px 5px 10px 10px;
+    border: 2px solid rgba(0, 128, 0, 1);
+}
+
+#about_hno_praxis .row h1,
+#about_hno_praxis .row h5 {
+    color: rgba(0, 128, 0, 1);
+}
+
+
+/* ................ */
+
+
+#home_page {
+    background-color: #fff;
+    padding-top: 55px;
+}
+
+#home_page_banner {
+    background-color: #ffffff;
+}
+
+#home_page_banner .container-fluid {
+    padding: 0;
+}
+
+#home_page_banner .container-fluid .row {
+    margin: 0;
+}
+
+#home_page_banner .container-fluid .row .col-12 {
+    padding: 0;
+}
+
+#home_page .container {
+    background-color: #f0f0f0;
+}
+
+#home_page .container .col-sm-6,
+#home_page .container .col-sm-3,
+#home_page .container .col-sm-2 {
+    background-color: #fff;
+    border: 10px solid #f0f0f0;
+    padding: 20px;
+}
+
+/* Banner Section ........ */
+
+#home_page_banner .container-fluid .row .col-12 .large_991 {
+    display: none;
+}
+
+#home_page_banner .container-fluid .row .col-12 .large_414 {
+    display: none;
+}
+
+#home_page_banner .container-fluid .row .col-12 .small_414 {
+    display: none;
+}
+
+
+@media(min-width:991px){
+    #home_page_banner .container-fluid .row .col-12 .large_991 {
+        display: block;
+    }
+}
+
+@media only screen and (min-width:414px) and (max-width:990px){
+    #home_page_banner .container-fluid .row .col-12 .large_414 {
+        display: block;
+    }
+}
+
+@media(max-width:413px){
+    #home_page_banner .container-fluid .row .col-12 .small_414 {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Google map .................... */
+
+#google_map
+#google_map .container-fluid,
+#google_map .container-fluid .row,
+#google_map .container-fluid .row .col-12 {
+    padding: 0;
+}
+
+#google_map {
+    margin: 55px 0 0 0;
+}
+
+.mapouter{
+    text-align:right;
+}
+
+.gmap_canvas{
+    overflow:hidden;
+    background:none!important;
+}
+
+
+/* ................ */
+
+#home_page  .home_page_footer {
+    border: 3px solid gray;
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+#home_page .home_page_footer .col-md-2:not(:last-child) {
+    border-right: 2px solid lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Sub-Header page ==================================================================================
+*
+*
+*/
+
+#sub_header .container-fluid .row {
+    border: 3px solid rgba(0, 128, 0, 1);
+    -webkit-box-shadow: -1px 1px 12px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 12px 5px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 12px 5px rgba(0,0,0,0.75);
+}
+
+#sub_header img {
+	height: 50%;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+#sub_header .row ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#sub_header .container-fluid {
+	background-color: #fff;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#sub_header .container-fluid .row {
+	padding: 15px 10px;
+	overflow: hidden;
+}
+
+#sub_header ul li {
+    list-style: none;
+}
+
+@media (min-width:1050px) {
+    #sub_header .container-fluid .row {
+        height: 145px;
+    }
+}
+
+@media only screen and (min-width:648px) and (max-width:1049px){
+    #sub_header .container-fluid .row {
+        height: 165px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:647px){
+    #sub_header .container-fluid .row {
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* All page combined design ==================================================================================
+*
+*
+*/
+
+.all_page_combined_design img
+ {
+    margin-bottom: 30px;
+}
+
+.all_page_combined_design_desc .col-12 {
+    text-align: center;
+}
+
+.all_page_combined_design_desc h3 {
+	text-align: center;
+	padding: 20px 0 5px 0;
+	margin: 0 0 25px 0;
+	border-bottom: 3px solid gray;
+	display: inline-block;
+	color: gray;
+}
+
+.all_page_combined_design_desc img + img {
+    margin-top: 10px;
+}
+
+.all_page_combined_design_desc h5 {
+	border-bottom: 2px solid black;
+	display: inline-block;
+	padding: 0 0 3px 0;
+}
+
+.all_page_combined_design_desc .row + .row {
+    margin-top: 55px;
+
+}
+
+.all_page_combined_design_desc .row {
+    padding: 10px 10px;
+
+}
+
+.all_page_combined_design_desc .row:nth-child(odd) {
+    background-color: rgba(192,192,192, 0.3);
+}
+
+.all_page_combined_design_desc .row:nth-child(even) {
+    background-color: rgba(192,192,192, 0.1);
+}
+
+.all_page_combined_design_desc .row.mx-auto.row.mx-auto.transparent {
+	background: transparent;
+	margin-top: 20px;
+    border: 2px solid green;
+    width: 100%;
+}
+
+.all_page_combined_design_desc .row.mx-auto.row.mx-auto.transparent .btn-primary {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+.box_shadow {
+    box-shadow: 0px 0px 5px 7px rgba(119, 119, 119, 0.75);
+    -moz-box-shadow: 0px 0px 5px 7px rgba(119, 119, 119, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 7px rgba(119, 119, 119, 0.75);
+}
+
+
+
+
+
+
+
+/*
+*
+*
+* Eingang page Menu bar name Aktuelles ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* Rauchen page Menu bar name Rauchen/E-Zigarette ==================================================================================
+*
+*
+*/
+
+#rauchen_desc .col-sm-9 .row .col-12 {
+    text-align: left;
+}
+
+/*
+*
+*
+* Cola page Menu bar name Cola oder Diät-Cola ==================================================================================
+*
+*
+*/
+
+#cola_desc .col-sm-9 .row .col-12 {
+    text-align: left;
+}
+
+/*
+*
+*
+* Hausarztinfo page Menu bar name Hausärzte ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* Facharztinfo page Menu bar name Fachärzte ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* kontakt page Menu bar name Kontat ==================================================================================
+*
+*
+*/
+
+#contact_form_and_details {
+    margin-top: 2px;
+    width: 100%;
+}
+
+#contact_form_and_details h1 {
+    text-align: center;
+    color: rgba(0, 128, 0, 1);;
+}
+
+#contact_form_and_details h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid rgba(0, 128, 0, 1);;
+	padding: 5px 0 0 0;
+	margin: 8px 0 20px 0;
+	width: 160px;
+	margin: 0 auto;
+}
+
+#contact_form_and_details .form-control {
+	border-radius: 0;
+	font-size: 12px;
+	color: #5B5B5B;
+    /* line-height: 25px; */
+    padding: 10px;
+}
+
+#contact_form_and_details .btn.btn-primary {
+	background-color: rgba(0, 128, 0, 1);;
+	border: 0;
+	border-radius: 0;
+	font-size: 14px;
+	padding: 10px 20px;
+}
+
+#contact_form_and_details .contact-details {
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+	color: #5A5A5A;
+}
+
+#contact_form_and_details .contact-details .span {
+	padding: 5px 0 15px 0;
+}
+
+#contact_form_and_details .contact-details a {
+	color: #5A5A5A;
+}
+
+#contact_form_and_details .contact-details h4 {
+	color: rgba(0, 128, 0, 1);;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+@media(max-width:767px) {
+    #contact_form_and_details .contact-details h4 {
+        margin-top: 35px;
+    }
+}
+
+#contact_form_and_details .contact-details i {
+    color: rgba(0, 128, 0, 1);;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Stadeplan page Menu bar name Stadtplan ==================================================================================
+*
+*
+*/
+
+
+/*
+*
+*
+* Schwerpunkte page Menu bar name Ãœbersicht ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* Operativ page Menu bar name Zusammenfassung ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* vor-op page Menu bar name OP-Vorbereitung ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* mandel_op page Menu bar name Gaumenmandeln ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* rachenmandel_op page Menu bar name Rachenmandeln + "Polypen" OPs + Rachenmandel-OP  ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* scheidewand page Menu bar name Scheidewand-OP ==================================================================================
+*
+*
+*/
+#scheidewand_desc .for_bottom_space {
+    margin-bottom: 30px;
+}
+
+/*
+*
+*
+* schnarch_op page Menu bar name Schnarch-OP + Operative ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* nnh page Menu bar name Nasennebenhöhlen-OP + Kiefer-/ Stirn- u.a. Nebenhöhlen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* operative_nachsorge page Menu bar name operative Nachsorge ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* ambulante_ops page Menu bar name Für Kinder ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* lc page Menu bar name Für Erwachsene ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* stimm_sprach page Menu bar name Stimm- u. Sprachstörungen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* gleichgewichtsstoerungen page Menu bar name Schwindeldiagnostik + Schwindel ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* hoerstoerungen page Menu bar name Hörstörungen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* tinnitus page Menu bar name Tinnitus + Medikamente + Counceling + Tinnitusmasker ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* srt page Menu bar name SRT ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* schnarchen page Menu bar name Schnarch- u. Schlafmedizin + Schnarchen + Schlaf-Apnoe-Syndrom + Konservativ +  ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* allergie page Menu bar name Allergie + Allergischer Schnupfen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* tauchen page Menu bar name Tauchen und HNO ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* http://www.tauchen.hno-wasserturm.de/index.html page Menu bar nameTauchimpressionen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* audiologie page Menu bar name Einteilung ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* kinder_hno page Menu bar name Kinder ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* cerumen page Menu bar name Ohrenschmalz ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* paukenerguss page Menu bar name Tauchen + Flugreisen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* nasenpolypen page Menu bar name Nasenpolypen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* nebenhoehlenpolypen page Menu bar name Nasennebenhöhlen-Polypen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* mandelentzuendungen page Menu bar name Chron. Mandelentzündung ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* magnetfeld page Menu bar name Magnetfeldtherapie ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* sauerstoff page Menu bar name Sauerstofftherapie  ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* desynchra page Menu bar name Desynchra (neu) ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* liegen page Menu bar name Übungen im Liegen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* sitzen page Menu bar name Übungen im Sitzen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* stehen page Menu bar name Übungen im Stehen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* gehen page Menu bar name Übungen im Gehen ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* humor page Menu bar name Heiteres ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* Lebensgrundsatz page Menu bar name Lebensweisheit ==================================================================================
+*
+*
+*/
+
+#lebensgrundsatz_desc .col-12.h4 p {
+    margin-bottom: 50px;
+}
+
+#lebensgrundsatz_desc .col-12.h4 p:first-child {
+    margin-top: 50px;
+}
+
+
+/*
+*
+*
+* Impressum page Menu bar name Gesetzliches  ==================================================================================
+*
+*
+*/
+
+/*
+*
+*
+* datenschutz page Menu bar name Datenschutz  ==================================================================================
+*
+*
+*/
+
+#datenschutz_desc ul li {
+    list-style: none;
+}
+
+
+/*
+*
+*
+* TKH-Infos page ==================================================================================
+*
+*
+*/
+
+#tkh_infos_desc .row .col-sm-12 ul li {
+    list-style: none;
+}
+
+
+
+/*
+*
+*
+* cookies part ==================================================================================
+*
+*
+*/
+
+#cookies_part.cookies {
+	background-color: gray;
+	color: #000;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 200;
+	display: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 16px 0 16px 0;
+}
+
+#cookies_part p {
+	margin: 7px 0 0 0;
+}
+
+#cookies_part .col-md-2 .btn-primary {
+    margin: 0;
+}
+
+#cookies_part.cookies.cookies_hide {
+    display: none !important;
+}
+
+
+
